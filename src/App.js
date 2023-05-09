@@ -9,7 +9,7 @@ function App() {
     <div>
       <Navbar title="Navbar" />
       <div className="container">
-        <User name="Mustafa" salary="15000" department="Bilişim" />
+        <User name="Mustafa" department="Bilişim" />
       </div>
     </div>
   );
