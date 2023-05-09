@@ -1,22 +1,16 @@
 import './App.css';
-import { useEffect } from 'react';
-import { useState } from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import User from './components/User';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [data, setData] = useState(0);
-
-  useEffect(() => {
-    console.log('useEffect');
-  }, [data]);
 
   return (
-    <div className="App">
-      <button onClick={() => setData(data + 1)}>Click me +</button>
-      <button onClick={() => setData(data - 1)}>Click me -</button>
-      <p>
-        {data}
-      </p>
+    <div>
+      <Navbar title="Navbar" />
+      <div className="container">
+        <User name="Mustafa" salary="15000" department="Bilişim" />
+      </div>
     </div>
   );
 }
