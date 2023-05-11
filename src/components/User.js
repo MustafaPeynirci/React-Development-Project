@@ -13,6 +13,9 @@ class User extends Component {
   // }
   onClickEvent = (number, e) => {
     console.log(number, this);
+    this.setState({
+      isVisible: !this.state.isVisible,
+    });
   };
 
   render() {
@@ -24,7 +27,7 @@ class User extends Component {
           <div className="card">
             <div className="card-header d-flex justify-content-between align-items-center">
               <h4
-                className="d-inline"
+                className="d-inline cursor-pointer"
                 onClick={this.onClickEvent.bind(this, 6)}
               >
                 {name}
